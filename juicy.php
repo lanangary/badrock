@@ -10,7 +10,7 @@
  * Author URI:        www.juicebox.com.au
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       badrock
+ * Text Domain:       juicy
  * Domain Path:       /languages
  */
 
@@ -24,34 +24,34 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'badrock_VERSION', '1.0.3' );
+define( 'JUICY_VERSION', '1.0.3' );
 
 /**
  * The code that runs during plugin activation.
- * This action is documented in includes/class-badrock-activator.php
+ * This action is documented in includes/class-juicy-activator.php
  */
-function activate_badrock() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-badrock-activator.php';
-	badrock_Activator::activate();
+function activate_juicy() {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-juicy-activator.php';
+	Juicy_Activator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
- * This action is documented in includes/class-badrock-deactivator.php
+ * This action is documented in includes/class-juicy-deactivator.php
  */
-function deactivate_badrock() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-badrock-deactivator.php';
-	badrock_Deactivator::deactivate();
+function deactivate_juicy() {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-juicy-deactivator.php';
+	Juicy_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_badrock' );
-register_deactivation_hook( __FILE__, 'deactivate_badrock' );
+register_activation_hook( __FILE__, 'activate_juicy' );
+register_deactivation_hook( __FILE__, 'deactivate_juicy' );
 
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require plugin_dir_path( __FILE__ ) . 'includes/class-badrock.php';
+require plugin_dir_path( __FILE__ ) . 'includes/class-juicy.php';
 
 /**
  * Begins execution of the plugin.
@@ -62,10 +62,10 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-badrock.php';
  *
  * @since    1.0.0
  */
-function run_badrock() {
+function run_juicy() {
 
-	$plugin = new badrock();
+	$plugin = new Juicy();
 	$plugin->run();
 
 }
-run_badrock();
+run_juicy();
