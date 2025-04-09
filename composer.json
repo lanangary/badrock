@@ -1,0 +1,6 @@
+{
+    "name": "lanangary/badrock",
+    "description": "A description of the package",
+    "type": "library",
+    "require": {}
+}
