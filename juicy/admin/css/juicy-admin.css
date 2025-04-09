@@ -1,0 +1,24 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+ .wpadmin-env {
+    pointer-events: none;
+    background: #A61416 !important;
+ }
+.wpadmin-env--production { background: #5E8271 !important; }
+
+.wpadmin-env--staging { background: #EBA605 !important; }
+
+.wpadmin-env__dashicon {
+    font-family: 'dashicons' !important;
+    display: inline-block !important;
+    margin-right: 5px !important;
+    font-size: 16px !important;
+}
+
+.dashicons-admin-generic:before {
+    position: relative;
+    top: -3px;
+}
